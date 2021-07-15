@@ -1,0 +1,10 @@
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.csprojAssemblyReference.cache
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.Form1.resources
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.Properties.Resources.resources
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.csproj.GenerateResource.cache
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.csproj.CoreCompileInputs.cache
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\bin\Debug\SocketProjectClient.exe.config
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\bin\Debug\SocketProjectClient.exe
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\bin\Debug\SocketProjectClient.pdb
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.exe
+C:\Users\DC\source\repos\SocketProjectClient\SocketProjectClient\obj\Debug\SocketProjectClient.pdb
