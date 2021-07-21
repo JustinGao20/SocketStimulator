@@ -1,2 +1,2 @@
 # SocketStimulator
-A windows form application that contains a server and a client to stimulate Internet connection by using TCP/IP and socket function，the sample program will have the function to transmit text message as well as file. 
+The project contains two windows form applications, a server and a client, to stimultate the process of Internet connection by utilizing TCP/IP protection agreement and socket function. Once connected, the server and client could interchange messages or files.
