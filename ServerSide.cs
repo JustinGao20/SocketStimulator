@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
@@ -58,7 +57,7 @@ namespace SocketProject
             socketListener.Bind(endpoint);
 
             //发送消息
-            this.richTextBox1.AppendText("系统监听成功！+ \n");
+            this.richTextBox1.AppendText("系统监听成功!"+ "\n");
 
             //开始监听，设定最大的连接请求
             socketListener.Listen(20);
@@ -69,8 +68,8 @@ namespace SocketProject
 
             //创建开始监听的线程
             acceptSocket = new Thread(new ParameterizedThreadStart(StartListen));
-
-            //不是后台线程，随着主线程停止而停止
+        
+            //后台线程，随着主线程停止而停止
             acceptSocket.IsBackground = true;
 
             //改变系统的线程状态
@@ -102,11 +101,34 @@ namespace SocketProject
                 //定义接受客户端消息的线程
                 receiveSocket = new Thread(new ParameterizedThreadStart(Receive));
 
-                //不是后台线程，随着主线程停止而停止
-                acceptSocket.IsBackground = true;
+                //后台线程，随着主线程停止而停止
+                receiveSocket.IsBackground = true;
 
                 //改变系统的线程状态
-                acceptSocket.Start(socketCom);
+                receiveSocket.Start(socketCom);
+            }
+        }
+
+        //当按下发送消息按钮的时候，服务端给客户端发送消息
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //把用户输入的消息convert成string
+                String message = this.richTextBox2.Text.Trim();
+                byte[] buffer = Encoding.Default.GetBytes(message);
+
+                List<byte> list = new List<byte>();
+                list.Add(0);
+                list.AddRange(buffer);
+
+                byte[] newBuffer = list.ToArray();
+                arrSocket[ip].Send(newBuffer);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("连接客户端的时候发生错误" + err.Message);
             }
         }
 
